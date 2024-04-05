@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+:root {
+    --primary: #094b65;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#header .logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+#header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--primary);
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+    background: var(--primary);
+    color: #fff;
+    transition: 0.5s;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--primary), transparent);
+    z-index: 10;
+}
+
+section img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section #text {
+    position: absolute;
+    color: var(--primary);
+    font-size: 10vw;
+    text-align: center;
+    line-height: .55em;
+    font-family: 'Rancho', cursive;
+    transform: translatey(-50%);
+}
+
+section #text span {
+    font-size: .20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translatey(100px);
+}
+
+#btn:hover{
+    background-color: #094b65;
+    color: aliceblue;
+    transition: 1s;
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: var(--primary);
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: transform 1s;
+}
+
+.sec h2:hover{
+    color: navajowhite;
+    transform: scale(1.05);
+}
+
+.sec p {
+    font-size: 1em;
+    color: #fff;
+    font-family: "Trirong", serif;
+    transition: transform 1s;
+}
+
+.sec p:hover{
+    color: navajowhite;
+    transform: scale(1.05);
+}
+
+footer {
+    position: relative;
+    padding: 0px 100px;
+    background: var(--primary);
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+}
+/* Add this CSS at the end of your existing styles */
+
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+
+    #header {
+        padding: 20px;
+    }
+    
+    #header .logo {
+        font-size: 1.5em;
+    }
+    
+    section #text {
+        font-size: 10vw;
+    }
+    
+    #btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    
+    .sec {
+        padding: 50px;
+    }
+    
+    .sec h2 {
+        font-size: 2.5em;
+    }
+    
+    .sec p {
+        font-size: 0.9em;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+    }
+
+    #header ul{
+        display: none;
+    }
+
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 480px) {
+    #header {
+        padding: 10px;
+    }
+    
+    #header .logo {
+        font-size: 1.2em;
+    }
+    
+    #header ul li {
+        margin: 5px 0;
+    }
+    
+    section #text {
+        font-size: 5vw;
+    }
+    
+    #btn {
+        font-size: 0.8em;
+        padding: 8px 15px;
+    }
+    
+    .sec {
+        padding: 30px;
+    }
+    
+    .sec h2 {
+        font-size: 2em;
+    }
+    
+    .sec p {
+        font-size: 0.8em;
+    }
+}
+
+/* Apply flexbox layout to the row */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Center align items horizontally */
+}
+
+/* Style individual card columns */
+.col {
+    flex: 1 0 300px; /* Adjust width as needed */
+    margin: 10px; /* Add some margin between columns */
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the card */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 400px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Add hover effect to the card */
+.card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+/* Style the card image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Style the card body */
+.card-body {
+    flex: 1;
+    padding: 15px;
+    background-color: #f8f9fa; /* Change background color as needed */
+    transition: 1s;
+}
+
+.card-body:hover{
+    background: navajowhite;
+}
+
+/* Style the card title */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333; /* Adjust text color as needed */
+}
+
+/* Style the card text */
+.card-text {
+    font-size: 1rem;
+    font-family: "Trirong", serif;
+    color: #6c757d; /* Adjust text color as needed */
+    margin-bottom: 1rem; /* Add some bottom margin to separate title and text */
+}
+
+/* Style the card link */
+.card-link {
+    text-decoration: none;
+    color: #007bff; /* Adjust link color as needed */
+    font-weight: bold;
+}
+
+/* Style the card link on hover */
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.row{
+    background: var(--primary);
+}

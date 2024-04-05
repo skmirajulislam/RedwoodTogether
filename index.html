@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+
+<body>
+
+    <head>
+        <title>Parallax Scrolling Website</title>
+    </head>
+
+    <body>
+        <header id="header">
+
+            <a href="#" class="logo">Redwood Union</a>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="nav-list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </header>
+
+        <Section>
+            <h2 id="text">
+                <span>It's time for a new</span>
+                <br>Adventure
+            </h2>
+            <img src="./img/leftBird.png" id="bird1">
+            <img src="./img/rightBird.png" id="bird2">
+            <img src="./img/forest.png" id="forest">
+
+            <a href="#" id="btn">Explore</a>
+
+            <img src="./img/land.png" id="rocks">
+            <img src="./img/water.png" id="water">
+        </Section>
+
+        <div class="sec">
+            <h2>Redwood National Park</h2>
+            <p>
+                Redwood National and State Parks are a string of protected forests, beaches and grasslands along
+                Northern California’s coast. On this half-day tour from Eureka take in the towering forests, journey
+                along a portion of the Avenue of the Giants, marvel at the beauty of the Sequoias, learn about the
+                ecology of the forest and the history of timber harvesting in California. See the forest floor up close
+                with some time to hike through the forest before returning to Eureka and the ship.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="./img/cal1.jpg" class="card-img-top" alt="Hollywood Sign on The Hill" />
+                    <div class="card-body">
+                        <h5 class="card-title">CHANDELIER TREE</h5>
+                        <p class="card-text">
+                            The Chandelier Tree in Drive-Thru Tree Park is a magnificent 276-foot tall redwood tree in
+                            Leggett, California with a 6-foot wide by 6-foot-9-inch high hole cut through its base to
+                            allow a car to drive through
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/cal2.jpeg" class="card-img-top" alt="Palm Springs Road" />
+                    <div class="card-body">
+                        <h5 class="card-title">Experience Tranquility in the Heart of Nature</h5>
+                        <p class="card-text">
+                            Nestled amidst the tranquility of the Redwood National Park, Palm Springs Road offers a
+                            scenic drive through lush greenery and towering redwoods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/cal3.jpg" class="card-img-top" alt="Los Angeles Skyscrapers" />
+                    <div class="card-body">
+                        <h5 class="card-title">A Photographer's Dream</h5>
+                        <p class="card-text">Capture the awe-inspiring beauty of the towering redwoods against the
+                            backdrop of Los Angeles skyscrapers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/cal4.jpg" class="card-img-top" alt="Skyscrapers" />
+                    <div class="card-body">
+                        <h5 class="card-title">Discover Hidden Gems Among the Giants</h5>
+                        <p class="card-text">
+                            Venture off the beaten path and explore the lesser-known corners of the Redwood National
+                            Park. Among the towering skyscrapers of nature, you'll find hidden gems waiting to be
+                            discovered.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/cal5.jpg" class="card-img-top" alt="Skyscrapers" />
+                    <div class="card-body">
+                        <h5 class="card-title">Unwind and Reconnect with Nature</h5>
+                        <p class="card-text">
+                            Escape the hustle and bustle of city life and unwind amidst the towering redwoods of
+                            California. With their serene beauty and majestic presence, these ancient giants provide the
+                            perfect backdrop for relaxation and rejuvenation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/cal6.jpg" class="card-img-top" alt="Skyscrapers" />
+                    <div class="card-body">
+                        <h5 class="card-title">A Haven for Outdoor Enthusiasts</h5>
+                        <p class="card-text">
+                            Calling all outdoor enthusiasts! The Redwood National Park offers a playground of adventure
+                            just waiting to be explored.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+            let lastScrollTop = 0;
+            let opacity = 1;
+
+            window.addEventListener('scroll', function () {
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -.1 + '%';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * 2 + 'px';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * -5 + 'px';
+                rocks.style.top = value * -.12 + 'px';
+                forest.style.top = value * .25 + 'px';
+                header.style.top = value * .5 + 'px';
+
+                // Check scroll direction
+                if (value > lastScrollTop) {
+                    // Scrolling down
+                    if (opacity > 0) {
+                        opacity -= 0.05; // Decrease opacity gradually
+                        btn.style.opacity = opacity;
+                    }
+                } else {
+                    // Scrolling up
+                    if (opacity < 1) {
+                        opacity += 0.05; // Increase opacity gradually
+                        btn.style.opacity = opacity;
+                    }
+                }
+                lastScrollTop = value <= 0 ? 0 : value;
+            });
+
+        </script>
+
+    </body>
+</body>
+
+</html>
