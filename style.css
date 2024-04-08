@@ -122,7 +122,7 @@ section #text span {
     transform: translatey(100px);
 }
 
-#btn:hover{
+#btn:hover {
     background-color: #094b65;
     color: aliceblue;
     transition: 1s;
@@ -141,7 +141,7 @@ section #text span {
     transition: transform 1s;
 }
 
-.sec h2:hover{
+.sec h2:hover {
     color: navajowhite;
     transform: scale(1.05);
 }
@@ -153,7 +153,7 @@ section #text span {
     transition: transform 1s;
 }
 
-.sec p:hover{
+.sec p:hover {
     color: navajowhite;
     transform: scale(1.05);
 }
@@ -172,44 +172,66 @@ footer a {
 .menu-icon {
     display: none;
 }
+
 /* Add this CSS at the end of your existing styles */
 
 
 
 /* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
+    #mobile-sl {
+        background-image: url('./img/starry-sky.jpg');
+        background-size: cover;
+        background-position: center;
+    }
 
     #header {
         padding: 20px;
     }
-    
+
+    #mobile-sl h2,
+    span {
+        color: aliceblue;
+    }
+
     #header .logo {
         font-size: 1.5em;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
-    
+
     section #text {
         font-size: 10vw;
     }
-    
+
     #btn {
         font-size: 1em;
         padding: 10px 20px;
     }
-    
+
     .sec {
         padding: 50px;
     }
-    
+
     .sec h2 {
         font-size: 2.5em;
     }
-    
+
     .sec p {
         font-size: 0.9em;
     }
 
     .menu-icon {
         display: none;
+        color: white;
+        transition: 1s;
+    }
+
+    .menu-icon:hover {
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(247, 245, 108), 0 0 25px rgb(245, 203, 137), 0 0 50px rgb(241, 183, 101), 0 0 100px rgb(217, 235, 162), 0 0 200px rgb(255, 252, 74);
     }
 
     .nav-list {
@@ -221,7 +243,7 @@ footer a {
         font-size: 30px;
     }
 
-    #header ul{
+    #header ul {
         display: none;
     }
 
@@ -232,32 +254,32 @@ footer a {
     #header {
         padding: 10px;
     }
-    
+
     #header .logo {
         font-size: 1.2em;
     }
-    
+
     #header ul li {
         margin: 5px 0;
     }
-    
+
     section #text {
         font-size: 5vw;
     }
-    
+
     #btn {
         font-size: 0.8em;
         padding: 8px 15px;
     }
-    
+
     .sec {
         padding: 30px;
     }
-    
+
     .sec h2 {
         font-size: 2em;
     }
-    
+
     .sec p {
         font-size: 0.8em;
     }
@@ -266,13 +288,16 @@ footer a {
 /* Apply flexbox layout to the row */
 .row {
     display: flex;
-    flex-wrap: wrap; /* Center align items horizontally */
+    flex-wrap: wrap;
+    /* Center align items horizontally */
 }
 
 /* Style individual card columns */
 .col {
-    flex: 1 0 300px; /* Adjust width as needed */
-    margin: 10px; /* Add some margin between columns */
+    flex: 1 0 300px;
+    /* Adjust width as needed */
+    margin: 10px;
+    /* Add some margin between columns */
     display: flex;
     justify-content: center;
 }
@@ -285,12 +310,14 @@ footer a {
     width: 400px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Add smooth transition effect */
+    transition: transform 0.3s ease;
+    /* Add smooth transition effect */
 }
 
 /* Add hover effect to the card */
 .card:hover {
-    transform: translateY(-5px); /* Lift the card slightly on hover */
+    transform: translateY(-5px);
+    /* Lift the card slightly on hover */
 }
 
 /* Style the card image */
@@ -304,11 +331,12 @@ footer a {
 .card-body {
     flex: 1;
     padding: 15px;
-    background-color: #f8f9fa; /* Change background color as needed */
+    background-color: #f8f9fa;
+    /* Change background color as needed */
     transition: 1s;
 }
 
-.card-body:hover{
+.card-body:hover {
     background: navajowhite;
 }
 
@@ -316,21 +344,25 @@ footer a {
 .card-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #333; /* Adjust text color as needed */
+    color: #333;
+    /* Adjust text color as needed */
 }
 
 /* Style the card text */
 .card-text {
     font-size: 1rem;
     font-family: "Trirong", serif;
-    color: #6c757d; /* Adjust text color as needed */
-    margin-bottom: 1rem; /* Add some bottom margin to separate title and text */
+    color: #6c757d;
+    /* Adjust text color as needed */
+    margin-bottom: 1rem;
+    /* Add some bottom margin to separate title and text */
 }
 
 /* Style the card link */
 .card-link {
     text-decoration: none;
-    color: #007bff; /* Adjust link color as needed */
+    color: #007bff;
+    /* Adjust link color as needed */
     font-weight: bold;
 }
 
@@ -339,6 +371,6 @@ footer a {
     text-decoration: underline;
 }
 
-.row{
+.row {
     background: var(--primary);
 }
