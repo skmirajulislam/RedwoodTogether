@@ -1,4 +1,4 @@
-# BreadcrumbsRedwoodTogether
+# RedwoodTogether 🌲
 
 ### A Web Project for Raising Awareness about Redwood National Park
 
